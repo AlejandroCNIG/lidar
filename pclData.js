@@ -1,0 +1,1 @@
+var pclDataJson ='[{"name": "Mallorca","path": "mallorca/pointclouds/mallorca/cloud.js"},{"name": "Perales","path": "perales/pointclouds/perales/cloud.js"},{"name": "IGN","path": "ign/pointclouds/ign/cloud.js"}]';
