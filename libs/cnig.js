@@ -73,12 +73,12 @@ function loadPointCloudFromList(pc) {
 		let pointcloud = e.pointcloud;
 		let material = pointcloud.material;
 		viewer.scene.addPointCloud(pointcloud);
-		material.pointColorType = Potree.PointColorType.ELEVATION; // any
+//		material.pointColorType = Potree.PointColorType.ELEVATION; // any
 																	// Potree.Po$
-		material.size = 1;
-		material.pointSizeType = Potree.PointSizeType.ADAPTIVE;
-		material.shape = Potree.PointShape.SQUARE;
-		viewer.fitToScreen();
+//		material.size = 1;
+//		material.pointSizeType = Potree.PointSizeType.ADAPTIVE;
+//		material.shape = Potree.PointShape.SQUARE;
+//		viewer.fitToScreen();
 	});
 }
 

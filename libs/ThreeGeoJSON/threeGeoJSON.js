@@ -45,7 +45,8 @@ function drawThreeGeo(json, radius, shape, materalOptions, container) {
                 coordinate_array = createCoordinateArray(json_geom[geom_num].coordinates[segment_num]);
 
                 for (var point_num = 0; point_num < coordinate_array.length; point_num++) {
-                    convertCoordinates(coordinate_array[point_num], radius);
+                  fillXYValuesWithoutConversion(coordinate_array[point_num]);
+//                  convertCoordinates(coordinate_array[point_num], radius);
                 }
                 drawLine(x_values, y_values, z_values, materalOptions);
             }
@@ -202,8 +203,15 @@ function drawThreeGeo(json, radius, shape, materalOptions, container) {
         var lon = coordinates_array[0];
         var lat = coordinates_array[1];
 
-        z_values.push((lat / 180) * radius);
-        y_values.push((lon / 180) * radius);
+        y_values.push((lat / 180) * radius);
+        x_values.push((lon / 180) * radius);
+    }
+    
+    function fillXYValuesWithoutConversion(coordinates_array) {
+        var lon = coordinates_array[0];
+        var lat = coordinates_array[1];
+    	y_values.push(lat);
+    	x_values.push(lon);
     }
 
     function drawParticle(x, y, z, options) {

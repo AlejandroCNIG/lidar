@@ -18336,6 +18336,11 @@ void main() {
 				let boxWorld = Utils.computeTransformedBoundingBox(pointcloudBox, pointcloud.matrixWorld);
 				box.union(boxWorld);
 			}
+			
+			if (pointclouds.length == 0){
+				box.min = { x: -14130.476300878858, y: 3892589.3014248293, z: 20 };
+				box.max = { x: 1125407.5452707172, y: 4859462.912820436, z: 20};
+			}
 
 			return box;
 		}
